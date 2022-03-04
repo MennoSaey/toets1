@@ -11,6 +11,8 @@
 <div class="row1">
     <div class="row1content">
         <h2>collaborators</h2>
+        <p>Total salary : </p>
+        <p>Average salary off all collaborators : </p>
         <div th:each="collaborator: ${collaborators}">
             <a class="buttonLook mediumButton"
                th:href="@{|/collaborator/${collaborator.getId()}|}"
