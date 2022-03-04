@@ -120,5 +120,22 @@ VALUES (
 	'Twee kerels die er al vijf jaar van houden om het publiek uit hun dak te zien gaan! Onze missie: Het leven is een feest en daar moet gedanst worden. Hoe doen we dat? Met onze Latin-, Dancehall- en een vleugje Commercialplaten voor alle leeftijden zorgen we voor ieder wat wils.',
 	'Moombahton • Dancehall • Commercial', 'https://vi.be/platform/kryptonight', 'SOME GIG''s: Tomorrowland''s Dreamville, MnM Start to Dj Finalist Flowtrack Summer Camp Casa Blanca Festival Sunrise Festival Red ''n Blue Café Local Noxx Publik Vice Festival KdG TD ...');
 
+INSERT INTO COLLABORATOR (ID, FIRST_NAME, LAST_NAME, ROLE, SALARY, ACTIVE)
+VALUES (1, 'Els', 'Dewitte', 'ticket counter', 2150, true);
+INSERT INTO COLLABORATOR (ID, FIRST_NAME, LAST_NAME, ROLE, SALARY, ACTIVE)
+VALUES (2, 'Ahmed', 'Ban Dawi', 'director', 3560, true);
+INSERT INTO COLLABORATOR (ID, FIRST_NAME, LAST_NAME, ROLE, SALARY, ACTIVE)
+VALUES (3, 'Nasja', 'Brukss', 'stage coordinator', 2940, true);
+INSERT INTO COLLABORATOR (ID, FIRST_NAME, LAST_NAME, ROLE, SALARY, ACTIVE)
+VALUES (4, 'Dries', 'Lemmens', 'waiter', 1950, true);
+INSERT INTO COLLABORATOR (ID, FIRST_NAME, LAST_NAME, ROLE, SALARY, ACTIVE)
+VALUES (5, 'Levi', 'Dowitsj', 'ticket counter', 2320, true);
+INSERT INTO COLLABORATOR (ID, FIRST_NAME, LAST_NAME, ROLE, SALARY, ACTIVE)
+VALUES (6, 'Anja', 'Stoops', 'waiter', 2020, false);
+INSERT INTO COLLABORATOR (ID, FIRST_NAME, LAST_NAME, ROLE, SALARY, ACTIVE)
+VALUES (7, 'Aleksander', 'Friang', 'waiter', 1840, true);
+INSERT INTO COLLABORATOR (ID, FIRST_NAME, LAST_NAME, ROLE, SALARY, ACTIVE)
+VALUES (8, 'Kerem', 'Kaya', 'waiter', 1980, true);
+
 
 
