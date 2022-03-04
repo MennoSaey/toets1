@@ -14,7 +14,7 @@
         <div th:each="collaborator: ${collaborators}">
             <a class="buttonLook mediumButton"
                th:href="@{|/collaborator/${collaborator.getId()}|}"
-               th:text="${collaborator.getFirstName()} + ' ' + ${collaborator.getLastName()}">collaborator name</a>
+               th:text="${collaborator.getFirstName()} + ' ' + ${collaborator.getLastName()} + ' ' + ${collaborator.getRole()}">collaborator name</a>
         </div>
     </div>
 </div>
