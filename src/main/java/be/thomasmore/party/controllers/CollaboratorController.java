@@ -40,7 +40,7 @@ public class CollaboratorController {
         model.addAttribute("totalsalary",totalsalary);
         model.addAttribute("nrcollaborators",nrcollaborators);
     }
-
+    //oefeing 5 (stond al in commit genaamd "oefening 4 versie 2")
     @GetMapping({"/collaborator/role/{role}"})
     public String collaboratorsRole(Model model,
                                   @PathVariable String filter) {
