@@ -1,7 +1,6 @@
 package be.thomasmore.party.controllers;
 
 
-import be.thomasmore.party.model.Artist;
 import be.thomasmore.party.model.Collaborator;
 import be.thomasmore.party.model.Venue;
 import be.thomasmore.party.repositories.CollaboratorRepository;
@@ -24,25 +23,29 @@ public class CollaboratorController {
         model.addAttribute("collaborators", AllCollaborators);
         return "collaborators";
     }
-
-    @GetMapping({"/collaborator/{id}", "/collaborator"})
-    public String collaboratorDetails(Model model,
-                                      @PathVariable(required = false) Integer id) {
-        if (id == null) return "collaborator";
-
-        Optional<Collaborator> optionalCollaborator = collaboratorRepository.findById(id);
-        //noinspection OptionalIsPresent
-        if (optionalCollaborator.isPresent()) {
-            model.addAttribute("collaborator", optionalCollaborator.get());
+    @GetMapping({"/collaborators/{id}", "/collaborators"})
+    public String collaborators(Model model, @PathVariable(required = false) Integer id) {
+        if (id == null) return "collaborators";
+        Optional<Collaborator> collaboratorFromDb = collaboratorRepository.findById(id);
+        if (collaboratorFromDb.isPresent()) {
+            model.addAttribute("collaborater", collaboratorFromDb.get());
         }
-        return "collaborator";
+        return "venuedetails";
+    }
+
+    public void addSalary(Model model, Collaborator collaborator){
+        final Iterable<Collaborator> AllCollaborators = collaboratorRepository.findAll();
+        int totalsalary = collaborator.getSalary();
+        int nrcollaborators = collaborator.getId();
+        model.addAttribute("totalsalary",totalsalary);
+        model.addAttribute("nrcollaborators",nrcollaborators);
     }
 
     @GetMapping({"/collaborator/role/{role}"})
     public String collaboratorsRole(Model model,
-                                  @PathVariable String role) {
-        Iterable<Collaborator> collaborators = collaboratorRepository.findAllByRoleEquals(role);
-        model.addAttribute("collaborators", collaborators);
+                                  @PathVariable String filter) {
+        Iterable<Collaborator> Rolecollaborators = collaboratorRepository.findAllByRoleEquals(filter);
+        model.addAttribute("collaborators", Rolecollaborators);
         return "collaborators";
     }
 }
